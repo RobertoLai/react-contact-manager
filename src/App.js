@@ -17,7 +17,7 @@ class App extends Component {
         </div>
         <Route exact path="/" component={ContactListPage} />
         <Route path="/contacts/new" component={ContactFormPage} />
-        <Route path="/contacts/edit/:_id" component={ContactFormPage} />
+        <Route path="/contacts/edit/:id" component={ContactFormPage} />
       </Container>
     );
   }

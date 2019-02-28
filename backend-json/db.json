@@ -1,0 +1,20 @@
+{
+  "contacts": [
+    {
+      "name": {
+        "first": "Rainer Maria"
+      },
+      "phone": "+49000000",
+      "email": "rainer.maria.rilke@anacondao.de",
+      "id": 2
+    },
+    {
+      "name": {
+        "first": "Rob"
+      },
+      "phone": "+49000000",
+      "email": "roberto.lai@deutschebahn.com",
+      "id": 4
+    }
+  ]
+}

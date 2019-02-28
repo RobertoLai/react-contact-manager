@@ -1,6 +1,8 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { Card, Button, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 
 export default function ContactCard({ contact, deleteContact }) {
   return (
@@ -8,7 +10,7 @@ export default function ContactCard({ contact, deleteContact }) {
       <Card.Content>
         <Card.Header>
           <Icon name="user outline" /> {contact.name.first}
-          {contact.name.last}
+          &nbsp;{contact.name.last}
         </Card.Header>
         <Card.Description>
           <p>
@@ -21,10 +23,17 @@ export default function ContactCard({ contact, deleteContact }) {
       </Card.Content>
       <Card.Content extra>
         <div className="ui two buttons">
-          <Button basic color="green">
+          <Link
+            to={`/contacts/edit/${contact.id}`}
+            className="ui basic button green"
+          >
             Edit
-          </Button>
-          <Button basic color="red">
+          </Link>
+
+          <Button
+            className="ui basic button red"
+            onClick={() => deleteContact(contact.id)}
+          >
             Delete
           </Button>
         </div>
@@ -36,4 +45,3 @@ export default function ContactCard({ contact, deleteContact }) {
 ContactCard.propTypes = {
   contact: PropTypes.object.isRequired
 };
-

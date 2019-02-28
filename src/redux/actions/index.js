@@ -1,3 +1,16 @@
-import { fetchContacts } from "./ContactActions";
-
-export default fetchContacts;
+import {
+  fetchContacts,
+  fetchContact,
+  updateContact,
+  newContact,
+  saveContact,
+  deleteContact
+} from "./ContactActions";
+export {
+  fetchContacts,
+  fetchContact,
+  updateContact,
+  newContact,
+  saveContact,
+  deleteContact
+};
